@@ -4,6 +4,7 @@ body {
      -moz-user-select: none;
           user-select: none;
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 /* width */
@@ -32,8 +33,7 @@ body {
   align-items: center;
   flex-direction: row;
   max-height: 78px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 4px 40px;
 }
 .navbar .logo {
   height: 60px;
@@ -91,10 +91,16 @@ body {
 /* Media query for smaller screens */
 @media screen and (max-width: 550px) {
   .navbar {
-    padding: 0px !important;
+    padding: 4px !important;
+  }
+  .logo {
+    height: 50px;
+    width: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .navbar .nav_menu {
-    display: none;
+    display: none !important;
   }
   .navbar img.logo {
     display: block;
@@ -104,19 +110,18 @@ body {
     height: 100px;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 550px) and (max-width: 900px) {
   .navbar {
     padding: 4px !important;
   }
   .navbar .nav_menu {
-    display: block;
+    display: block !important;
   }
   .navbar img.logo {
     display: block;
   }
   .navbar img.menu-icon {
     display: none;
-    height: 100px;
   }
 }
 .landing_section {
@@ -271,8 +276,8 @@ body {
     padding: 20px 14px;
   }
   .invest_apartment_section .title_part .title {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 40px;
+    line-height: 40px;
   }
   .invest_apartment_section .title_part p {
     width: 100%;
@@ -293,7 +298,10 @@ body {
   .invest_apartment_section .sub_card_part .card_item_left img {
     position: relative;
     height: 200px;
-    width: 336px;
+    width: 280px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_left .items_condents {
+    padding: 0px;
   }
   .invest_apartment_section .sub_card_part .card_item_left .items_condents h3 {
     font-size: 28px;
@@ -314,7 +322,10 @@ body {
   .invest_apartment_section .sub_card_part .card_item_right img {
     position: relative;
     height: 200px;
-    width: 336px;
+    width: 280px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_right .items_condents {
+    padding: 0px;
   }
   .invest_apartment_section .sub_card_part .card_item_right .items_condents h3 {
     font-size: 28px;
@@ -325,7 +336,7 @@ body {
     line-height: 18px;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 550px) and (max-width: 900px) {
   .invest_apartment_section {
     padding: 40px;
   }
@@ -371,8 +382,72 @@ body {
   .invest_apartment_section .sub_card_part .card_item_right img {
     position: absolute;
     height: 200px;
+    width: 300px;
+    top: -34px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_right .items_condents h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_right .items_condents p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1400px) {
+  .invest_apartment_section {
+    padding: 40px 90px;
+  }
+  .invest_apartment_section .title_part .title {
+    font-size: 58px;
+    line-height: 68px;
+  }
+  .invest_apartment_section .title_part p {
+    width: 80%;
+    text-align: center;
+  }
+  .invest_apartment_section .sub_card_part {
+    margin-top: 48px;
+    padding: 0px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_left {
+    min-height: 100px;
+    max-width: 100%;
+    padding: 14px;
+    margin-bottom: 54px !important;
+    flex-direction: row;
+  }
+  .invest_apartment_section .sub_card_part .card_item_left img {
+    position: absolute;
+    height: 200px;
     width: 280px;
     top: -34px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_left .items_condents {
+    padding: 0px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_left .items_condents h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_left .items_condents p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_right {
+    min-height: 100px;
+    max-width: 100%;
+    padding: 14px;
+    margin-bottom: 54px !important;
+  }
+  .invest_apartment_section .sub_card_part .card_item_right img {
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    top: -34px;
+  }
+  .invest_apartment_section .sub_card_part .card_item_right .items_condents {
+    padding: 0px;
   }
   .invest_apartment_section .sub_card_part .card_item_right .items_condents h3 {
     font-size: 28px;
@@ -553,7 +628,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 550px) and (max-width: 900px) {
   .booing_section {
     padding: 40px;
   }
@@ -599,6 +674,54 @@ body {
   .booing_section .condent_image .tab_item .items_banner img {
     height: 300px;
     width: 100%;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1400px) {
+  .booing_section {
+    padding: 40px 80px;
+  }
+  .booing_section .title_part {
+    margin-top: 14px;
+  }
+  .booing_section .title_part .title {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  .booing_section .title_part p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .booing_section .condent_image {
+    padding-bottom: 24px;
+    margin-top: 30px;
+  }
+  .booing_section .condent_image .tab_menu {
+    flex-direction: row;
+    font-size: 16px;
+    line-height: 14px;
+    padding: 8px;
+  }
+  .booing_section .condent_image .tab_menu a {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .booing_section .condent_image .tab_item {
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  .booing_section .condent_image .tab_item .items_discription .title {
+    line-height: 34px;
+    font-size: 32px;
+  }
+  .booing_section .condent_image .tab_item .items_banner {
+    padding: 10px;
+    width: 100%;
+  }
+  .booing_section .condent_image .tab_item .items_banner img {
+    height: 450px;
+    width: 400px;
   }
 }
 .amenities_section {
@@ -713,9 +836,17 @@ body {
 .amenities_section .carousel .list img:first-child {
   margin-left: 0;
 }
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 900px) and (max-width: 1400px) {
   .amenities_section .wrapper {
     width: 550px;
+  }
+  .amenities_section .wrapper .carousel .list img {
+    width: 260px;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  .amenities_section .wrapper {
+    width: 590px;
   }
   .amenities_section .wrapper .carousel .list img {
     width: 100%;
@@ -732,6 +863,12 @@ body {
     display: inline-block;
     margin-left: 30px;
   }
+  .amenities_section .wrapper i:first-child {
+    left: -24px;
+  }
+  .amenities_section .wrapper i:last-child {
+    right: -26px;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -747,7 +884,7 @@ body {
     text-align: start;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 550px) and (max-width: 900px) {
   .amenities_section {
     padding: 20px 14px;
   }
@@ -850,7 +987,7 @@ body {
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 9000px) {
+@media screen and (min-width: 550px) and (max-width: 900px) {
   .footer {
     padding: 0 60px;
   }
